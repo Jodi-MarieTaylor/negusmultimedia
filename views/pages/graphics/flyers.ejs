@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../../partials/head %>
+</head>
+<body >
+
+<header>
+    <% include ../../partials/header %>
+</header>
+
+<main>
+         <!-- site-main -->
+         <div id="main" class="site-main">
+        
+        
+        
+        	     
+                 
+                 
+                        
+                <!-- primary -->
+                <div id="primary" class="content-area">
+                    
+                    <!-- site-content -->
+                    <div id="content" class="site-content" role="main">
+                    
+                    
+                        
+                    
+                        
+                        
+                        
+                        <!-- InstanceBeginEditable name="FeaturedContent" -->
+                        
+                        
+                        <!-- InstanceEndEditable -->
+                        
+                        
+                        
+                        <!-- layout-full -->
+                        <div class="layout-full">
+                        
+                        
+                        
+                            <!-- InstanceBeginEditable name="LayoutFullContent" -->
+                            
+                            
+                            <!-- .gallery-single -->
+                            <div class="gallery-single">
+                            
+                            
+                                <!-- entry-header -->
+                                <header class="entry-header">
+                                    <h1 class="entry-title">Flyers</h1>
+                                </header>
+                                <!-- entry-header -->
+                                
+                                
+                                
+                                <!-- .media-grid-wrap -->
+                                <div class="media-grid-wrap">
+                                
+                                    <!-- .pw-gallery -->
+                                    <div class="pw-gallery pw-collage pw-collage-loading" data-gallery-style="minimal" data-share="true" data-fullscreen="true" data-bg-opacity="0.95" data-row-height="360" data-mobile-row-height="120" data-effect="effect-4">
+                                        
+                                        <% for(var i=0; i < posts.length; i++) { %>
+                                          <a href="<%= posts[i].file %>" data-size="2000x2000" data-med="<%= posts[i].file %>" data-med-size="960x960" data-attachment-page="image.jpg">
+                                            <img src="<%= posts[i].file %>" alt="image" width="500" height="500" />
+                                           
+                                          </a>
+                                      <% } %>  
+                                        
+                                    </div>
+                                    <!-- .pw-gallery -->
+                                    
+                                </div>  
+                                <!-- .media-grid-wrap --> 
+                                
+                                
+                                
+                                <!-- .nav-single -->
+                                <nav class="nav-single row">
+                                
+                                    <div class="nav-previous col-xs-6">
+                                        <h4>PREVIOUS</h4>
+                                        <a href="gallery-single-video.html" rel="prev"><span class="meta-nav">←</span> PORTRAITS</a>
+                                    </div>
+                                    
+                                    <div class="nav-next col-xs-6">
+                                        <h4>NEXT</h4>
+                                        <a href="gallery-single-video.html" rel="next">NATURE <span class="meta-nav">→</span></a>
+                                    </div>
+                                    
+                                </nav>
+                                <!-- .nav-single -->  
+                            
+                            
+                            </div>
+                            <!-- .gallery-single -->
+                            
+                            
+                            
+                            <!-- Root element of PhotoSwipe. Must have class pswp. -->
+                            <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="pswp__bg"></div>
+                                <div class="pswp__scroll-wrap">
+                                  <div class="pswp__container">
+                                    <div class="pswp__item"></div>
+                                    <div class="pswp__item"></div>
+                                    <div class="pswp__item"></div>
+                                  </div>
+                                  <div class="pswp__ui pswp__ui--hidden">
+                                    <div class="pswp__top-bar">
+                                        <div class="pswp__counter"></div>
+                                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                                        <button class="pswp__button pswp__button--share" title="Share"></button>
+                                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                                        <div class="pswp__preloader">
+                                            <div class="pswp__preloader__icn">
+                                              <div class="pswp__preloader__cut">
+                                                <div class="pswp__preloader__donut"></div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                        <div class="pswp__share-tooltip"></div>
+                                    </div>
+                                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                                    <div class="pswp__caption">
+                                      <div class="pswp__caption__center">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <!-- Root element of PhotoSwipe -->
+                            
+                            
+                            
+                            
+                            
+                            
+                            <!-- InstanceEndEditable -->
+                            
+                            
+                            
+                        </div>
+                        <!-- layout-full -->
+                        
+                        
+                        
+                    
+                        
+                        
+                    
+                    </div>
+                    <!-- site-content -->
+                    
+                </div>
+                <!-- primary --> 
+                
+                
+                
+                   
+            
+            
+            
+            
+            </div>
+            <!-- site-main -->
+            
+</main>
+
+<footer>
+    <% include ../../partials/footer %>
+</footer>
+
+</body>
+</html>

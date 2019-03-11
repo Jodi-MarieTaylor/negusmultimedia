@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../../partials/head %>
+</head>
+
+<body >
+ <!-- header -->
+ <header id="masthead" class="site-header" role="banner">
+                
+                
+        <!-- site-logo -->
+        <div class="site-logo">
+            
+            
+            <!-- logo : image -->
+            <h1 class="site-title">
+                <a href="index.html" rel="home">
+                    <img src="/images/site/logo.png" alt="logo">
+                </a>
+            </h1>
+            <a href="/admin/post/manage">Manage Posts   | </a>
+            <a href="/admin/logout" >Logout</a>
+            
+            <!-- logo : image -->
+            
+            
+            <!-- logo : text -->
+            <!--<h1 class="site-title">
+                <a href="../index.html" rel="home">
+                    Photographer
+                </a>
+            </h1>
+            <p class="site-description">a photography theme.</p> -->
+            <!-- logo : text -->
+            
+            
+        </div>
+        <!-- site-logo -->
+             
+        
+</header>   
+<main>
+
+    
+    <h2 style="text-align: center;">Create New Post</h2>
+    <div style="margin-bottom: 20px;">
+        <form style="max-width: 700px; margin: 0 auto; padding: 10px;" method="Post" action="/admin/upload" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-sm-4 col-lg-4">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" id="title"  name="title" placeholder="Enter Title">
+                        </div>
+                </div>
+                <div class="col-sm-4 col-lg-4">
+                        <div class="form-group">
+                            <label for="title">Client</label>
+                            <input type="text" class="form-control" id="client"  name="client" placeholder="Enter Client">
+                        </div>
+                </div>
+                <div class="col-sm-4 col-lg-4">
+                        <div class="form-group">
+                            <label for="title">Date</label>
+                            <input type="date" class="form-control" id="date"  name="date" placeholder="Enter Date">
+                        </div>
+                </div>
+ 
+            </div>
+               
+               
+                
+                <div class="form-group">
+                    <label for="title">Short Description</label>
+                    <textarea row="5" col="3" class="form-control" name="description" id="description">
+
+                    </textarea>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Category</label>
+                            <select class="form-control" name="category" id="exampleFormControlSelect1">
+                                <option></option>
+                                <optgroup label="Graphic Design">
+                                    <option value="logos">Logos</option>
+                                    <option value="flyers">Flyers</option>
+                                    <option value="business-cards">Business Cards</option>
+                                    <option value="print">Print</option>
+                                    <option value="ads">ADS</option>
+                                    <option value="other-design">Other</option>
+                                </optgroup>
+                                <optgroup label="Photography">
+                                        <option value="weddings">Weddings and Engagments</option>
+                                        <option value="corporate">Coporate</option>
+                                        <option value="Events">Events</option>
+                                        <option value="portraits">Portraits</option>
+                                        <option value="promotional">Promotional</option>
+                                        <option value="other-photography">Other</option>
+                                </optgroup>
+                                <optgroup label="Videography">
+                                        <option value="videography">Videography</option>
+                                </optgroup>
+                                <optgroup label="Web Design">
+                                        <option value="uiux">UI UX Design</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6">  
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Image</label>
+                            <input type="file" name="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                    </div>
+                </div>
+               
+                <button type="submit" class="submit btn btn-primary pull-right">Submit</button>
+
+        </form>
+        </br>
+        </br>
+
+    </div>
+</main>
+
+
+</body>
+</html>

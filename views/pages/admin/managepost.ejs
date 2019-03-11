@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../../partials/head %>
+    <style>
+            .imagecontainer {
+              position: relative;
+            }
+            
+            .image {
+              opacity: 1;
+              display: block;
+              width: 100%;
+              transition: .5s ease;
+              backface-visibility: hidden;
+            }
+            
+            .imagemiddle {
+              transition: .5s ease;
+              opacity: 0;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              text-align: center;
+              width: 80%;
+            }
+            
+            .imagecontainer:hover .image {
+              opacity: 0.3;
+            }
+            
+            .imagecontainer:hover .imagemiddle {
+              opacity: 1;
+            }
+            
+            .imagetext {
+              background-color: #222;
+              color: white;
+              font-size: 16px;
+              padding: 16px 32px;
+            }
+     </style>
+</head>
+
+<body >
+ <!-- header -->
+ <header id="masthead" class="site-header" role="banner">
+                
+                
+        <!-- site-logo -->
+        <div class="site-logo">
+            
+            
+            <!-- logo : image -->
+            <h1 class="site-title">
+                <a href="index.html" rel="home">
+                    <img src="/images/site/logo.png" alt="logo">
+                </a>
+            </h1>
+            <a href="/admin/logout" >Logout</a>
+            
+            
+        </div>
+        <!-- site-logo -->
+             
+        
+</header>   
+<main>
+    <div >
+        <form style="max-width: 700px; margin: 0 auto; padding: 10px;" method="Post" action="/admin/post/manage" >
+                <div class="form-group">
+                        <label for="exampleFormControlSelect1">Category</label>
+                        <select style="text-transform: capitalize !important;" class="form-control"  name="category" id="exampleFormControlSelect1">
+                            <option value="all">All</option>
+                             <% if(category != null && category != ""){ %>
+                                <option value="<%category%>" selected ><%= category%> </option>
+                              <% } %>
+                            <optgroup label="Graphic Design">
+                                <option value="logos">Logos</option>
+                                <option value="flyers">Flyers</option>
+                                <option value="business-cards">Business Cards</option>
+                                <option value="print">Print</option>
+                                <option value="ads">ADS</option>
+                                <option value="other-design">Other</option>
+                            </optgroup>
+                            <optgroup label="Photography">
+                                    <option value="weddings">Weddings and Engagments</option>
+                                    <option value="corporate">Coporate</option>
+                                    <option value="Events">Events</option>
+                                    <option value="portraits">Portraits</option>
+                                    <option value="promotional">Promotional</option>
+                                    <option value="other-photography">Other</option>
+                            </optgroup>
+                            <optgroup label="Videography">
+                                    <option value="videography">Videography</option>
+                            </optgroup>
+                            <optgroup label="Web Design">
+                                    <option value="uiux">UI UX Design</option>
+                            </optgroup>
+                        </select>
+                        <button type="submit" class="submit btn-sm btn btn-primary ">Search</button>
+                        <a href="/admin/post/create" class="btn button btn-primary"> Create New Post</a>
+                    </div>
+                
+        </form>
+      
+    </div>
+    <div class="container">
+        
+           <!-- .media-grid-wrap -->
+           <div class="media-grid-wrap">
+                                
+                <!-- .pw-gallery -->
+                <div class="pw-gallery " data-gallery-style="minimal" data-share="true" data-fullscreen="true" data-bg-opacity="0.95" data-row-height="360" data-mobile-row-height="120" data-effect="effect-4">
+                      
+                          
+                    <div class="row">
+                        <% for(var i=0; i < posts.length; i++) { %>
+                            <div class="col-lg-4" style="padding: 10px;">
+
+                                <div class="imagecontainer">
+                                        <img src="<%= posts[i].file %>" class="image" alt="image" style="height: 330px;" width="500" height="500" />
+                                        <div class="imagemiddle">
+                                          <div class="imagetext">
+                                              <p style="padding: 0; margin: 0 ;">Title: <%= posts[i].title%> </p>
+                                              <p  style="padding: 0; margin: 0;">Client: <%= posts[i].client %></p>
+                                              <p style="padding: 0; margin: 0;">Date Created: <%= posts[i].date%></p>
+
+                                              <p style="text-transform: capitalize;">Category: <%= posts[i].category %></p>
+                                              <br>
+                                              <button class="btn btn-sm"> <a  href="<%= posts[i].file %>" data-size="3000x2000" data-med="<%= posts[i].file %>" data-med-size="1200x800"> View </a></button>
+                                              <button  class="btn btn-sm"> <a href="/admin/post/delete/<%= posts[i]._id%>">Delete </a></button>
+
+                                            
+                                            </div>
+                                        </div>
+                                </div>
+                                 
+                                    
+                            </div>
+                        <% } %>
+                        
+                        
+                                
+                    </div>
+                   
+
+                    
+                      
+                </div>
+            </div>
+    </div>
+</main>
+
+
+</body>
+</html>
