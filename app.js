@@ -70,9 +70,12 @@ app.set('view engine', 'ejs');
 
 // index page 
 app.get('/', function(req, res) {
+    res.render('pages/landing-page');
+});
+// index page 
+app.get('/home', function(req, res) {
     res.render('pages/index');
 });
-
 
 // work page 
 app.get('/work', function(req, res) {
