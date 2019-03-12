@@ -2293,7 +2293,7 @@ A library of transitions for revealing the loaded images
 	position: fixed; top: 0; right: 0; bottom: 0; left: 0; margin: 0; max-height: none;
 	}
 .home-landing .home-wrap .intro {
-	top: 22%; padding: 0 2em;
+	top: 300px; padding: 0 2em;
 	}
 .home-landing .intro {
 	visibility: hidden; opacity: 0;
@@ -2327,7 +2327,7 @@ A library of transitions for revealing the loaded images
 .home-wrap .fs-single-image:after,
 .home-wrap .fade-slider:after,
 .home-landing .fs-video:after { 
-	content: ""; position: absolute; z-index: 10; top: 0; left: 0; right: 0; bottom: 0; background: #111; opacity: .2; -webkit-transition: all 1.2s ease-in-out; transition: all 1.2s ease-in-out;
+	content: ""; position: absolute; z-index: 10; top: 0; left: 0; right: 0; bottom: 0;  -webkit-transition: all 1.2s ease-in-out; transition: all 1.2s ease-in-out;
 	}
 
 /* FULLSCREEN SLIDER - FULSCREEN IMAGE */
