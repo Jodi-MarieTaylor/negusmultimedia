@@ -608,7 +608,7 @@ div.uploader,
 		.social li a {
             display: block; float: left; margin: 0 .1em .2em 0; text-align: center; font-size: 15px; font-family: "fontello"; width: 38px; line-height: 34px; color: #333; background: #fff; border: 2px solid #555; border-radius: 50%;
 			}
-		.social li a.facebook:before {
+		/*.social li a.facebook:before {
  			content: '\e825'
 			}
 		.social li a.twitter:before {
@@ -802,7 +802,7 @@ div.uploader,
 			}
 		.social li a.vkontakte:hover {
             background-color: #6383A8;
-			}
+			}*/
 /* MAP */
 .map {
  	margin: 0; line-height: 0;

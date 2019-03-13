@@ -30,198 +30,121 @@
                 <div id="content" class="site-content" role="main">
                 
                 
-                	
-				
-                
-                
-				
-					<!-- InstanceBeginEditable name="FeaturedContent" -->
-					
-                    
-                    
-                    <div class="top-content">
-                    		
-                        <div class="map">
-                            <div data-latitude="-25.363882" data-longitude="131.044922" data-zoom="5" id="map-canvas" class="map-canvas"></div>
-                            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-                        </div>
-
-                    </div>
-                        
-
-
-					<!-- InstanceEndEditable -->
-                    
-                    
+ 
                     
                     <!-- layout-fixed -->
                     <div class="layout-fixed">
-                    
-                    
-                    
-                        <!-- InstanceBeginEditable name="LayoutFixedContent" -->
-                
-                	
-                    
-                    
-                    
-                    
-                        <!-- .hentry -->
+                      <!-- .hentry -->
                         <article class="hentry page">
                             
                             
                             <!-- .entry-header -->
                             <header class="entry-header">
-                                <h1 class="entry-title">CONTACT ME</h1>
+                                <h1 class="entry-title">CONTACT US</h1>
                             </header>
                             <!-- .entry-header --> 
                                 
                                 
                             <!-- .entry-content -->
-                            <div class="entry-content">
+                            <div class="row entry-content">
                                 
-                                <h3 class="section-title">I am a social guy :)</h3>
-                                
-                                <!-- SOCIAL -->
-                                <ul class="social">
-                                    <li><a class="facebook" href="#"></a></li>
-                                    <li><a class="twitter" href="#"></a></li>
-                                    <li><a class="linkedin" href="#"></a></li>
-                                    <li><a class="google-plus" href="#"></a></li>
-                                    <li><a class="pinterest" href="#"></a></li>
-                                    <li><a class="github" href="#"></a></li>
-                                    <li><a class="dribbble" href="#"></a></li>
-                                    <li><a class="instagram" href="#"></a></li>
-                                    <li><a class="lastfm" href="#"></a></li>
-                                    <li><a class="vine" href="#"></a></li>
-                                    <!--<li><a class="rss" href="#"></a></li>
-                                    <li><a class="behance" href="#"></a></li>
-                                    <li><a class="vimeo" href="#"></a></li>
-                                    <li><a class="forrst" href="#"></a></li>
-                                    <li><a class="skype" href="#"></a></li>
-                                    <li><a class="picasa" href="#"></a></li>
-                                    <li><a class="youtube" href="#"></a></li>
-                                    <li><a class="flickr" href="#"></a></li>
-                                    <li><a class="tumblr" href="#"></a></li>
-                                    <li><a class="blogger" href="#"></a></li>
-                                    <li><a class="delicious" href="#"></a></li>
-                                    <li><a class="digg" href="#"></a></li>
-                                    <li><a class="friendfeed" href="#"></a></li>
-                                    <li><a class="wordpress" href="#"></a></li>
-                                    <li><a class="stack-overflow" href="#"></a></li>
-                                    <li><a class="foursquare" href="#"></a></li>
-                                    <li><a class="xing" href="#"></a></li>
-                                    <li><a class="weibo" href="#"></a></li>
-                                    <li><a class="soundcloud" href="#"></a></li>
-                                    <li><a class="fivehundredpx" href="#"></a></li>
-                                    <li><a class="slideshare" href="#"></a></li>-->
-                                </ul>
-                                <!-- SOCIAL -->
-                            
-                            
-                            	
-                                <h2 class="section-title">REACH ME</h2>
-                                
-                                <!-- row -->
-                                <div class="row">
+                              
+                                <div class="col-lg-8">
                                     
-                                    <!-- column 3/12 -->
-                                    <div class="col-xs-6 col-sm-3">
-
-                                        <!-- fun-fact -->
-                                        <div class="fun-fact">
-                                            <i class="pw-icon-location-outline"></i>
-                                            <h4>based in Los Angeles, USA</h4>
-                                        </div>
-                                        <!-- fun-fact -->
-
-                                    </div>
-                                    <!-- column 3/12 -->
+                                    <h3 class="section-title">Mail Us Right Here</h3>
                                     
-                                    <!-- column 3/12 -->
-                                    <div class="col-xs-6 col-sm-3">
-
-                                        <!-- fun-fact -->
-                                        <div class="fun-fact">
-                                            <i class="pw-icon-phone-outline"></i>
-                                            <h4>Tel : +123 456 78900</h4>
-                                        </div>
-                                        <!-- fun-fact -->
-
-                                    </div>
-                                    <!-- column 3/12 -->
+                                    <!-- .contact-form -->
+                                    <div class="contact-form">
                                     
-                                    <!-- column 3/12 -->
-                                    <div class="col-xs-6 col-sm-3">
-
-                                        <!-- fun-fact -->
-                                        <div class="fun-fact">
-                                            <i class="pw-icon-mail-1"></i>
-                                            <h4>johndoe@gmail.com</h4>
-                                        </div>
-                                        <!-- fun-fact -->
-
+                                        <form id="contact-form" class="validate-form" method="post" action="send-mail.php">
+                                        
+                                            <!-- enter mail subject here -->
+                                            <input type="hidden" name="subject" id="subject" value="You have a new message from Photographer!">
+                                            
+                                            <p>
+                                            <label for="name">NAME</label>
+                                            <input type="text" name="name" id="name" class="required">
+                                            </p>
+                                            
+                                            <p>
+                                            <label for="email">EMAIL</label>
+                                            <input type="text" name="email" id="email" class="required email">
+                                            </p>
+                                            
+                                            <p class="antispam">Leave this empty if you are a human :
+                                                <br /><input name="url" />
+                                            </p>
+                                            
+                                            <p>
+                                            <label for="message">MESSAGE</label>
+                                            <textarea name="message" id="message" class="required"></textarea>
+                                            </p>
+                                            
+                                            <p>
+                                            <button class="submit button pull-right"><span class="submit-label">Submit</span><span class="submit-status"></span></button>
+                                            </p>
+                                        
+                                        </form>
+                                    
                                     </div>
-                                    <!-- column 3/12 -->
-
-                                    <!-- column 3/12 -->
-                                    <div class="col-xs-6 col-sm-3">
-
-                                        <!-- fun-fact -->
-                                        <div class="fun-fact">
-                                            <i class="pw-icon-thumbs-up"></i>
-                                            <h4>Freelance Available</h4>
-                                        </div>
-                                        <!-- fun-fact -->
-
-                                    </div>
-                                    <!-- column 3/12 -->
-
+                                    <!-- .contact-form -->
+                                        
                                 </div>
-                                <!-- row -->
-                                
-                                
-                                
-                                
-                                <h3 class="section-title">Or mail me!</h3>
-                                  
-                                <!-- .contact-form -->
-                                <div class="contact-form">
-                                
-                                    <form id="contact-form" class="validate-form" method="post" action="send-mail.php">
+                                <div class="col-lg-4">
                                     
-                                        <!-- enter mail subject here -->
-                                        <input type="hidden" name="subject" id="subject" value="You have a new message from Photographer!">
-                                        
-                                        <p>
-                                          <label for="name">NAME</label>
-                                          <input type="text" name="name" id="name" class="required">
-                                        </p>
-                                        
-                                        <p>
-                                          <label for="email">EMAIL</label>
-                                          <input type="text" name="email" id="email" class="required email">
-                                        </p>
-                                        
-                                        <p class="antispam">Leave this empty if you are a human :
-                                            <br /><input name="url" />
-                                        </p>
-                                        
-                                        <p>
-                                          <label for="message">MESSAGE</label>
-                                          <textarea name="message" id="message" class="required"></textarea>
-                                        </p>
-                                        
-                                        <p>
-                                          <button class="submit button"><span class="submit-label">Submit</span><span class="submit-status"></span></button>
-                                        </p>
+                                    <h2 class="section-title">REACH US AT</h2>
                                     
-                                    </form>
-                                
-                                </div>
-                                <!-- .contact-form -->
-                                	
-                               
+                                    <!-- row -->
+                                    <div class="">
+                                    
+                                        <!-- column 3/12 -->
+                                        <div class="">
+
+                                            <!-- fun-fact -->
+                                            <div class="fun-fact">
+                                                <i class="fas fa-phone"></i>
+                                                <h4>Phone : +1 (876) 807-3646</h4>
+                                                <h4>Phone : +1 (876) 587-0411 </h4>
+                                            </div>
+                                            <!-- fun-fact -->
+
+                                        </div>
+                                        <!-- column 3/12 -->
+                                        
+                                        <!-- column 3/12 -->
+                                        <div class="">
+
+                                            <!-- fun-fact -->
+                                            <div class="fun-fact">
+                                                <i class="fas fa-envelope"></i>
+                                                <h4>nicholas@negusmultimedia.com</h4>
+                                            </div>
+                                            <!-- fun-fact -->
+
+                                        </div>
+                                        
+                                        <!-- column 3/12 -->
+                                        <div class="">
+
+                                            <!-- fun-fact -->
+                                            <div class="fun-fact">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                                <h4>Kingston, Jamaica</h4>
+                                            </div>
+                                            <!-- fun-fact -->
+
+                                        </div>
+                                        <!-- column 3/12 -->
+                                        
+                                        <!-- column 3/12 -->
+
+                                    
+
+                                    </div>
+                                    <!-- row -->
+                                    
+                                </div>   
+                            
                             </div>
                             <!-- .entry-content -->
                             
