@@ -68,112 +68,43 @@
                                     <!-- .entry-content -->
                                     <div class="entry-content">
                                         
-                                        <p>Read is a responsive WordPress theme focused on readability with a minimalist design. You will enjoy blogging using our Read theme. It is clean, minimalist, content-focused and responsive. It looks great on every device. Your readers will enjoy reading your blog.</p>
                                         
-                                      
-                                        <!-- row -->
-                                        <div class="row">
-                                        
-                                        
+                                        <% for(var i=0; i < posts.length; i++) { %>
+                                         
                                             
-                                            <!-- column 6/12 -->
-                                            <div class="col-sm-6">
-                                                <h2 class="section-title">Client</h2>
-                                                <p>Warner Bros</p>
-                                            </div>
-                                            <!-- column 6/12 -->
-                                            <!-- column 6/12 -->
-                                            <div class="col-sm-6">
-                                                <h2 class="section-title">Date</h2>
-                                                <p><a class="button" target="_blank" href="http://themes.pixelwars.org/?theme=read-wp">Launch Project</a></p>
-                                            </div>
-                                            <!-- column 6/12 -->
-                                        </div>
-                                        <!-- row -->	
-                                        
-                                        
-                                        
-                                        
-                                        <iframe src="http://player.vimeo.com/video/92040599?title=0&amp;byline=0&amp;portrait=0&amp;color=000000" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                        
-                                          <!-- row -->
-                                          <div class="row">
-                                        
-                                        
+                                            <!-- row -->
+                                            <div class="row">
                                             
-                                                <!-- column 6/12 -->
-                                                <div class="col-sm-6">
-                                                    <h2 class="section-title">Client</h2>
-                                                    <p>Warner Bros</p>
-                                                </div>
-                                                <!-- column 6/12 -->
-                                                <!-- column 6/12 -->
-                                                <div class="col-sm-6">
-                                                    <h2 class="section-title">Date</h2>
-                                                    <p><a class="button" target="_blank" href="http://themes.pixelwars.org/?theme=read-wp">Launch Project</a></p>
-                                                </div>
-                                                <!-- column 6/12 -->
-                                            </div>
-                                            <!-- row -->	
-                                            
-                                            
-                                            
-                                            
-                                            <iframe src="http://player.vimeo.com/video/92040599?title=0&amp;byline=0&amp;portrait=0&amp;color=000000" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                            
-                                          <!-- row -->
-                                          <div class="row">
-                                        
-                                        
-                                            
-                                                <!-- column 6/12 -->
-                                                <div class="col-sm-6">
-                                                    <h2 class="section-title">Client</h2>
-                                                    <p>Warner Bros</p>
-                                                </div>
-                                                <!-- column 6/12 -->
-                                                <!-- column 6/12 -->
-                                                <div class="col-sm-6">
-                                                    <h2 class="section-title">Date</h2>
-                                                    <p><a class="button" target="_blank" href="http://themes.pixelwars.org/?theme=read-wp">Launch Project</a></p>
-                                                </div>
-                                                <!-- column 6/12 -->
-                                            </div>
-                                            <!-- row -->	
-                                            
-                                            
-                                            
-                                            
-                                            <iframe src="http://player.vimeo.com/video/92040599?title=0&amp;byline=0&amp;portrait=0&amp;color=000000" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                                             
                                                 
+                                                <!-- column 6/12 -->
+                                                <div class="col-sm-12">
+                                                    <h2 class="section-title text-center" style="text-align: center;" >Client</h2>
+                                                    <p style="text-transform: capitalize; text-align: center; font-size: 18px;"><%= posts[i].client %></p>
+                                                </div>
+                                                <!-- column 6/12 -->
+                                                <!-- column 6/12 -->
+                                              
+                                                <!-- column 6/12 -->
+                                            </div>
+                                            <!-- row -->	
+                                           <iframe src="<%= posts[i].file %>" width="640" height="360" style="margin: 0 auto; display: block;"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                           <br/>
+                                      
+                                        <% } %>  
+                                      
                                         
-                                   
+                                        
+                                        
+                                        
+                                
                                         
                                     
                                     </div>
                                     <!-- .entry-content -->
                                     
                                     
-                                    
-                                    <!-- .nav-single -->
-                                    <nav class="nav-single row">
-                                    
-                                        <div class="nav-previous col-xs-6">
-                                            <h4>PREVIOUS</h4>
-                                            <a href="gallery-single.html" rel="prev"><span class="meta-nav">←</span> Game Characters</a>
-                                        </div>
-                                        
-                                        <div class="nav-next col-xs-6">
-                                            <h4>NEXT</h4>
-                                            <a href="gallery-single.html" rel="next">Retro Logos And Badges <span class="meta-nav">→</span></a>
-                                        </div>
-                                        
-                                    </nav>
-                                    <!-- .nav-single --> 
                                  
-                                    
-                                
                                 </article>
                                 <!-- .hentry -->
                             

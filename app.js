@@ -218,7 +218,12 @@ app.get('/graphics/other', function(req, res){
 //cinemography
 
 app.get('/videography', function(req, res){
-    res.render('pages/cinemography');
+     Attachment.find({category: 'videography' },  function (err, posts) {
+        if (err) return console.error(err);
+        res.render('pages/cinemography', {
+            posts : posts,
+          });
+    })
 })
 
 
@@ -326,20 +331,40 @@ app.post('/admin/upload', upload.single('file'), function (req, res, next) {
         console.log("Got file")
     }
 
-    //upload image to cloudinary 
-    cloudinary.v2.uploader.upload(file.path, 
-    function(error, result) {
-        console.log(result, error)
-        var secure_url = result.secure_url
-        // upload to db form data and secure url
-        console.log('secure_url', secure_url);
-        var post = new Attachment({ title: req.body.title , client: req.body.client, datetaken: req.body.date, description: req.body.description, category: req.body.category, file: secure_url});
-        post.save(function (err, fluffy) {
-            if (err) return console.error("We didnt save", err);
-            console.log("We saved!");
-          });
+    if (req.body.category == "videography"){
+     console.log("Its a video")
+     cloudinary.v2.uploader.upload(file.path, 
+        { resource_type: "video" },
+        function(error, result) {
+            console.log(result, error)
+            var secure_url = result.secure_url
+            // upload to db form data and secure url
+            console.log('secure_url', secure_url);
+            var post = new Attachment({ title: req.body.title , client: req.body.client, datetaken: req.body.date, description: req.body.description, category: req.body.category, file: secure_url});
+            post.save(function (err, fluffy) {
+                if (err) return console.error("We didnt save", err);
+                console.log("We saved!");
+            });
 
-    });
+        });
+        
+    } else{
+         //upload image to cloudinary 
+        cloudinary.v2.uploader.upload(file.path, 
+        function(error, result) {
+            console.log(result, error)
+            var secure_url = result.secure_url
+            // upload to db form data and secure url
+            console.log('secure_url', secure_url);
+            var post = new Attachment({ title: req.body.title , client: req.body.client, datetaken: req.body.date, description: req.body.description, category: req.body.category, file: secure_url});
+            post.save(function (err, fluffy) {
+                if (err) return console.error("We didnt save", err);
+                console.log("We saved!");
+            });
+
+        });
+    }
+   
     res.redirect('/admin/post/manage');
 
 
@@ -390,5 +415,5 @@ app.get('/landing', function(req, res) {
     res.render('pages/home-landing-fades');
 
 })
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3005;
 app.listen(port, () => console.log('Listening on port ${port}'));

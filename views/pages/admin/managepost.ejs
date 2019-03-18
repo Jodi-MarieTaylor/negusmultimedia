@@ -121,7 +121,12 @@
                             <div class="col-lg-4" style="padding: 10px;">
 
                                 <div class="imagecontainer">
+                                        <% if  ( posts[i].category  == "videography") {  %>
+                                        <iframe src="<%= posts[i].file %>" width="640" height="360" style="margin: 0 auto; display: block;"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                        <% } else { %>
+
                                         <img src="<%= posts[i].file %>" class="image" alt="image" style="height: 330px;" width="500" height="500" />
+                                        <% } %>
                                         <div class="imagemiddle">
                                           <div class="imagetext">
                                               <p style="padding: 0; margin: 0 ;">Title: <%= posts[i].title%> </p>
