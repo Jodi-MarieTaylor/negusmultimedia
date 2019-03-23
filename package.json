@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +18,7 @@
   },
   "homepage": "https://github.com/Jodi-MarieTaylor/negusmultimedia#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
     "body-parser": "^1.18.3",
     "cloudinary": "^1.13.2",
     "ejs": "^2.6.1",

@@ -18,6 +18,7 @@ var multer  = require('multer');
 var upload = multer({ dest: 'uploads/' })
 
 
+
 var cloudinary = require('cloudinary');
 cloudinary.config({ 
     cloud_name: 'negus-multimedia', 
@@ -87,6 +88,11 @@ app.get("/contact", function(req, res) {
     res.sendFile(__dirname + "/contact.html")
    })
 
+
+//webdesign page
+app.get('/webdesign', function(req, res){
+    res.render('pages/webdesign');
+})
 
 
 //graphics page
@@ -226,6 +232,27 @@ app.get('/videography', function(req, res){
     })
 })
 
+
+
+//contact us email 
+
+app.post('/send-email', function(req, res){
+    console.log('sending email');
+    const sgMail = require('@sendgrid/mail');
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    console.log('key', process.env.SENDGRID_API_KEY); 
+    const msg = {
+      to: 'jodimarie@negusmultimedia.com',
+      from: 'website@negusmultimedia.com',
+      subject: 'Negus Multimedia Request',
+      text: req.body.name + ' sent a message to say ' + req.body.message + '. Email is' + req.body.email,
+      html: req.body.name + ' sent a message to say: <br /> <br />' + req.body.message  + ' <br /> Email is '+ req.body.email ,
+    };
+    sgMail.send(msg);
+    console.log("Sent!");
+    //document.getElementById('email-alert').hidden = false;
+    //res.render('pages/contact', {success: true})
+});
 
 //admin
 
@@ -406,7 +433,7 @@ app.get('/aboutus', function(req, res) {
    
 })
 app.get('/contactus', function(req, res) {
-    res.render('pages/contact');
+    res.render('pages/contact', {success: false});
 
    
 
@@ -415,5 +442,5 @@ app.get('/landing', function(req, res) {
     res.render('pages/home-landing-fades');
 
 })
-const port = process.env.PORT || 3005;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log('Listening on port ${port}'));

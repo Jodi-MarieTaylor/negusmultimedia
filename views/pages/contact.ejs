@@ -43,8 +43,10 @@
                                 <h1 class="entry-title">CONTACT US</h1>
                             </header>
                             <!-- .entry-header --> 
-                                
-                                
+                            
+                            <div class="alert alert-success email-alert" hidden id="email-alert">
+                                    Thanks for contacting us! We will get in touch with you soon! 
+                            </div>
                             <!-- .entry-content -->
                             <div class="row entry-content">
                                 
@@ -56,7 +58,7 @@
                                     <!-- .contact-form -->
                                     <div class="contact-form">
                                     
-                                        <form id="contact-form" class="validate-form" method="post" action="send-mail.php">
+                                        <form id="contact-form" class="validate-form" method="post" action="/send-email">
                                         
                                             <!-- enter mail subject here -->
                                             <input type="hidden" name="subject" id="subject" value="You have a new message from Photographer!">
@@ -81,7 +83,7 @@
                                             </p>
                                             
                                             <p>
-                                            <button class="submit button pull-right"><span class="submit-label">Submit</span><span class="submit-status"></span></button>
+                                            <button type="submit" class=" button pull-right" onclick="document.getElementById('email-alert').hidden = false;"><span class="">Submit</span><span class="s"></span></button>
                                             </p>
                                         
                                         </form>
